@@ -19,6 +19,21 @@ app.get("/decimal_to_binary/:decimal", (req, res)=>{
 
 });
 
+app.get("/to-hex/:decimal", (req, res)=>{
+    const decimal = parseInt(req.params.decimal);
+
+    if(isNaN(decimal)){
+        return res.send("Enter a number value")
+    }
+
+    const hexadecimal = decimal.toString(16);
+
+    return res.json({
+        "decimal": decimal,
+        "hexadecimal": hexadecimal
+    })
+})
+
 app.listen(port, ()=>{
     console.log("App listening on port", port)
 })

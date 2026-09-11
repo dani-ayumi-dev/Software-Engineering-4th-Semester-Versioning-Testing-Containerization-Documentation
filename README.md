@@ -12,7 +12,7 @@ The project will be developed in multiple stages:
 - [ ] Versioning with Git
 - [ ] Automated testing
 - [ ] Containerization with Docker
-- [ ] Final documentation
+- [ ] Final documentation 
 
 ---
 
@@ -45,3 +45,72 @@ app.get("/decimal_to_binary/:decimal", (req, res) => {
 app.listen(port, () => {
     console.log("App listening on port", port);
 });
+```
+
+## Versioning 
+
+### 1st Commit
+
+To version the code and create the first commit on branch main, I used the following simple git commands:
+
+1. git init 
+2. git add . 
+3. git status
+4. git commit -m'initial commit'
+5. git logs
+6. git branch -M main
+7. git remote add origin https://github.com/dani-ayumi-dev/Software-Engineering-4th-Semester-Versioning-Testing-Containerization-Documentation
+8. git push -u origin main
+
+### 2nd Commit with Branch
+
+The new code has a new feature: now the user can also convert decimal to hexadecimal with a new endpoint
+```javascript
+        const express = require("express");
+    const app = express();
+    const port = 3000
+
+    app.get("/decimal_to_binary/:decimal", (req, res)=>{
+        const decimal = parseInt(req.params.decimal);
+
+        // check if decimal is a number
+
+        if(isNaN(decimal)){
+            return res.send("Enter a number value");
+        }
+
+        const binary = decimal.toString(2);
+
+        return res.json({"decimal":decimal,
+            "binary": binary
+        })
+
+    });
+
+    app.get("/to-hex/:decimal", (req, res)=>{
+        const decimal = parseInt(req.params.decimal);
+
+        if(isNaN(decimal)){
+            return res.send("Enter a number value")
+        }
+
+        const hexadecimal = decimal.toString(16);
+
+        return res.json({
+            "decimal": decimal,
+            "hexadecimal": hexadecimal
+        })
+    })
+
+    app.listen(port, ()=>{
+        console.log("App listening on port", port)
+    })
+```
+To version the changes in the code, I created an branch called feature-hexadecimal
+
+Git commands used:
+
+1. git branch checkout -b feature-hexadecimal
+2. git checkout main
+3. git merge feature-hexadecimal
+
