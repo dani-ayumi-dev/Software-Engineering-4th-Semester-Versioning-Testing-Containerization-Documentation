@@ -57,7 +57,7 @@ To version the code and create the first commit on branch main, I used the follo
 2. git add . 
 3. git status
 4. git commit -m'initial commit'
-5. git logs
+5. git log
 6. git branch -M main
 7. git remote add origin https://github.com/dani-ayumi-dev/Software-Engineering-4th-Semester-Versioning-Testing-Containerization-Documentation
 8. git push -u origin main
@@ -111,6 +111,7 @@ To version the changes in the code, I created an branch called feature-hexadecim
 Git commands used:
 
 1. git branch checkout -b feature-hexadecimal
-2. git checkout main
-3. git merge feature-hexadecimal
+2. git commit -m'hexadecimal get route is added'
+3. git checkout main
+4. git merge feature-hexadecimal
 
