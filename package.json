@@ -1,6 +1,8 @@
 {
   "dependencies": {
-    "express": "^5.2.1"
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "mysql2": "^3.24.4"
   },
   "devDependencies": {
     "jest": "^30.5.1",
@@ -8,5 +10,12 @@
   },
   "scripts": {
     "test": "jest"
-  }
+  },
+  "name": "fourth_semester",
+  "description": "This project was developed as part of my **4th semester of Software Engineering**.",
+  "version": "1.0.0",
+  "main": "decimal_to_binary.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

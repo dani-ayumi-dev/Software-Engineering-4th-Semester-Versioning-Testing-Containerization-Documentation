@@ -1,0 +1,27 @@
+services:
+  mysql:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: user
+      MYSQL_PASSWORD: userpassword
+      MYSQL_DATABASE: hex_conversions_db
+    ports:
+      - 3306:3306
+    volumes: 
+      - dbData:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpAdm
+    restart: always
+    environment:
+        PMA_HOST: mysql
+        PMA_PASSWORD: password
+        PMA_USER: root
+    ports:
+      - 8080:80
+
+volumes:
+  dbData:

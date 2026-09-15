@@ -1,0 +1,59 @@
+# Project
+openapi: 3.0.0
+info:  
+  title: Decimal to Binary
+  version: 1.0.0  
+  description: An API that converts decimal to Binary
+
+# Endpoints
+#  - `/decimal-to-binary/:decimal`: Converts decimal number to binary number
+
+# Servers
+
+servers:
+  - url: http://localhost:3000
+    description: Local development server
+paths:
+  /decimal-to-binary/{decimal}:
+    get:
+      summary: Convert to Binary
+      description: converts a decimal number provided in the params to a binary number
+# parameters
+      parameters:
+        - name: decimal
+          in: path
+          required: true
+          description: a decimal number provided to be converted to a binary
+          schema: 
+            type: integer
+            example: 10
+
+        #Responses
+      responses:
+        '200':
+          description: if the code succeeds
+          content: 
+            application/json:
+              schema:
+                type: object
+                properties:
+                  decimal:
+                    type: integer
+                    example: 10
+                  binary:
+                    type: string
+                    example: "1010"
+        '400':
+          description: if code fails
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Please, enter a number"
+            
+            
+
+

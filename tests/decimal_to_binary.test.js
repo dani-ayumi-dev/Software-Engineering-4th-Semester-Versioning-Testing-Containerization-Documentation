@@ -1,4 +1,4 @@
-const app = require("./decimal_to_binary.js");
+const app = require("C:/Users/ruben/OneDrive/Área de Trabalho/Pasta Conteúdos Facul Dani/fourth_semester/endpoints_and_middlewares/decimal_to_binary.js");
 const request = require("supertest")
 
 describe("Testing app", ()=>{
@@ -18,7 +18,7 @@ describe("Testing app", ()=>{
         const response = await request(app).get("/decimal_to_binary/a");
 
         expect(response.status).toBe(400);
-        expect(response.body).toEqual({error: "Enter a number value"})
+        expect(response.body).toEqual({error: "Please, enter a number"})
     })
     
 })
