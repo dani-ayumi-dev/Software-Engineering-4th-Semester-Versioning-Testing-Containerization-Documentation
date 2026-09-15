@@ -150,7 +150,7 @@ describe("Testing app", ()=>{
 ````
 The output:
 
-![output](images\output.png)
+![output](images/output.png)
 
 ### Refactoring
 
@@ -269,7 +269,7 @@ app.use(cors())
 
 3rd step: execute the request in the Swagger documentation:
 
-![Executing request](images\executing_documentation.gif)
+![Executing request](images/executing_documentation.gif)
 
 ## Containerization with Docker
 
@@ -378,7 +378,7 @@ app.listen(port, ()=>{
 
 #### Output on phpAdmin (localhost:8080)
 
-![phpAdmin Result](images\phpadmin_result.gif)
+![phpAdmin Result](images/phpadmin_result.gif)
 
 
 
@@ -387,6 +387,6 @@ app.listen(port, ()=>{
 
 |Path | Description| link|
 |-----|--------------|----|
-|/to-hex/:decimal|endpoint that converts a decimal number to an hexadecimal number|![to hex converter](to-hex-docker\to-hex.js)|
+|/to-hex/:decimal|endpoint that converts a decimal number to an hexadecimal number|![to hex converter](to-hex-docker/to-hex.js)|
 
 
